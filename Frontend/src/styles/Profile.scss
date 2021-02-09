@@ -1,0 +1,33 @@
+@import "./Mixins.scss";
+
+.information {
+  @include shadowBorder();
+  @include grid(repeat(2, 1fr), 50px);
+  padding: 50px 20px;
+  .generalInfo {
+    .generalData {
+      @include grid(repeat(3, 1fr), 30px);
+      margin-top: 50px;
+    }
+  }
+  .additionalInfo {
+    .additionalData {
+      @include grid(1fr 1fr, 30px);
+      margin-top: 50px;
+    }
+  }
+  .saveButton {
+    text-align: right;
+    grid-column: span 2;
+    button {
+      padding: 10px 20px;
+      background: #94c1c4;
+      border-radius: 10px;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 14px;
+      text-align: center;
+      color: white;
+    }
+  }
+}

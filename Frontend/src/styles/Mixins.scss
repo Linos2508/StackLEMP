@@ -1,0 +1,20 @@
+@mixin shadowBorder {
+  background-color: white;
+  box-shadow: -6px 6px 15px rgba(0, 0, 0, 0.15);
+  border-radius: 20px;
+}
+@mixin generalFilter() {
+  border: 1px solid #dadada;
+  border-radius: 3px;
+  min-height: 34px;
+}
+@mixin grid($columns, $gap) {
+  display: grid;
+  grid-template-columns: ($columns);
+  grid-gap: ($gap);
+}
+@mixin flex($justify) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+}
