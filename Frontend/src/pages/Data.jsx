@@ -41,7 +41,7 @@ export default function Data(props) {
       sortable: true,
     },
     {
-      name: "Reg Information",
+      name: "Insert Date",
       selector: "insertDate",
       sortable: true,
     },
@@ -84,7 +84,7 @@ export default function Data(props) {
   const FilterComponent = ({ onFilter }) => (
     <article className="filterTable">
       <span>
-        <button>
+        <button onClick={() => getClients()}>
           <img src={ReloadIcon} alt="Reload" />
         </button>{" "}
       </span>
