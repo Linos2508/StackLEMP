@@ -9,5 +9,7 @@ export function inArray(needle, haystack = []) {
 }
 
 export function getBaseApi() {
-    return "https://api.linos2508.com:4444"
+    // The API were setup on a linux Server under the commented domain but also works on localhost
+    // return "https://api.linos2508.com:4444"
+    return "http://localhost:5000";
 }
