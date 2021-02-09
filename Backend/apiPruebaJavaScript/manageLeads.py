@@ -38,7 +38,7 @@ def manageLeads():
 			response["error"] = "Error: Not Parameter Found"
 	elif request.method == "PUT":
 		if requ.keys() >= {"firstName","lastName","phoneNumber","email","age","leadStatus","street","city","state","zipCode","country","idClient"}:
-			client = PruebaClass.getSingleFromTable("client","idClient"," AND active = 1 AND idClient = " + str("idClient"))
+			client = PruebaClass.getSingleFromTable("client","idClient"," AND active = 1 AND idClient = " + str(requ["idClient"]))
 			if client != None:
 				updateData = {
 					"firstName": requ["firstName"],
