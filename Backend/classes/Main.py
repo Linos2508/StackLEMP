@@ -10,16 +10,10 @@ class Main():
 		self.pwd = "KEPJS5eEQXNeZa5MxVRe"
 		self.port = 3306
 
-	def connectTest(self):
-		if(self.conn.open):
-			return "conected"
-		else:
-			return "not conected"
-
 	def getSingleFromTable(self, table_name, rows = "*", string_query = "",server = 1):
 		if server == 1:
-			conn=pymysql.connect(host = self.host, user = self.user, password = self.pwd, db = "Test", cursorclass = pymysql.cursors.DictCursor)
-		result = None;
+			conn=pymysql.connect(host = self.host, user = self.user, password = self.pwd, db = "prueba", cursorclass = pymysql.cursors.DictCursor)
+		result = None
 		query = "SELECT " + rows + " FROM " + table_name + " WHERE 1 " + string_query
 		try:
 			with conn.cursor() as cursor:
@@ -33,8 +27,8 @@ class Main():
 
 	def getMultipleFromTable (self, table_name, rows = "*", string_query = "",server=1):
 		if server == 1:
-			conn=pymysql.connect(host = self.host, port=self.port, user = self.user, password = self.pwd, db = "Test", cursorclass = pymysql.cursors.DictCursor)
-		result = None;
+			conn=pymysql.connect(host = self.host, port=self.port, user = self.user, password = self.pwd, db = "prueba", cursorclass = pymysql.cursors.DictCursor)
+		result = None
 		query = "SELECT " + rows + " FROM " + table_name + " WHERE 1 " + string_query
 		try:
 			with conn.cursor() as cursor:
@@ -50,8 +44,8 @@ class Main():
 
 	def insertTable (self,table_name, fields, server=1):
 		if server == 1:
-			conn=pymysql.connect(host = self.host, port=self.port, user = self.user, password = self.pwd, db = "Test", cursorclass = pymysql.cursors.DictCursor)
-		result = None;
+			conn=pymysql.connect(host = self.host, port=self.port, user = self.user, password = self.pwd, db = "prueba", cursorclass = pymysql.cursors.DictCursor)
+		result = None
 		query = "INSERT INTO " + table_name + " SET "
 		for key in fields: 
 			query += key + "='" + fields[key] + "', "
@@ -71,7 +65,7 @@ class Main():
 
 	def updateTable (self,table_name, fields, where,server=1):
 		if server == 1:
-			conn=pymysql.connect(host = self.host, port=self.port, user = self.user, password = self.pwd, db = "Test", cursorclass = pymysql.cursors.DictCursor)
+			conn=pymysql.connect(host = self.host, port=self.port, user = self.user, password = self.pwd, db = "prueba", cursorclass = pymysql.cursors.DictCursor)
 		result = None
 		query = "UPDATE " + table_name + " SET "
 		for key in fields:

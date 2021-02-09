@@ -1,6 +1,5 @@
 from .Main import Main
 import pymysql
-import pymssql
 import json
 import requests
 
